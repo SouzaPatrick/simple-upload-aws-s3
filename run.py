@@ -3,19 +3,14 @@
 from upload_s3 import UploadS3
 
 
-dataFile = {
-        "file_name": "aula-5-módulo-9-tolerância-geométrica-de-orientação.mp4",
-        "base_output_s3": "googleads",
-    }
+BASE_FOLDER = '/folder/base'
+BACKET_NAME = 'bucket_name'
+BASE_OUTPUT_S3 = "key_file"
 
-
-BASE_FOLDER = '/tmp/convert/'
-BACKET_NAME = 'adgroup.files'
-
+dataFile = {}
 
 #Local de saída do arquivo no s3
-dataFile['output'] = '{0}/'.format(dataFile['base_output_s3'])
-del dataFile['base_output_s3']
+dataFile['output'] = '{0}/'.format(BASE_OUTPUT_S3)
 
 #Local dos certificados na sua maquina
 dataFile['output_local'] = BASE_FOLDER
